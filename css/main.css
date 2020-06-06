@@ -298,6 +298,7 @@ font-size: 10px;
 }
 body {
 line-height: 1.42857143;
+overflow-x: hidden;
 }
 button,
 input,
@@ -6422,37 +6423,32 @@ text-decoration: none;
 }
 }
 @font-face {
-font-family: SegoeUI-Light;
-src: url(../fonts/SegoeUI-Light.eot@) format("embedded-opentype"), url(../fonts/SegoeUI-Light.woff2) format("woff2"), url(http://dom.tverstroyka.ru/fonts/SegoeUI-Light.woff) format("woff"),
-    url(http://dom.tverstroyka.ru/fonts/SegoeUI-Light.otf) format("opentype"), url(../fonts/SegoeUI-Light.ttf) format("truetype");
-font-style: normal;
-font-weight: 400;
-}
-@font-face {
 font-family: SegoeUI-Regular;
-src: url(../fonts/SegoeUI-Regular.eot@) format("embedded-opentype"), url(../fonts/SegoeUI-Regular.woff2) format("woff2"), url(../fonts/SegoeUI-Regular.woff) format("woff"),
-    url(http://dom.tverstroyka.ru/fonts/SegoeUI-Regular.otf) format("opentype"), url(http://dom.tverstroyka.ru/fonts/SegoeUI-Regular.ttf) format("truetype");
+src: url(../fonts/SegoeUI-Regular.eot@) format("embedded-opentype"),
+ url(../fonts/SegoeUI-Regular.woff2) format("woff2"),
+  url(../fonts/SegoeUI-Regular.woff) format("woff"),
+    url(../fonts/SegoeUI.otf) format("opentype"),
+     url(../fonts/SegoeUI.ttf) format("truetype");
 font-style: normal;
 font-weight: 400;
 }
 @font-face {
 font-family: SegoeUI-Bold;
-src: url(../fonts/SegoeUI-Bold.eot@) format("embedded-opentype"), url(../fonts/SegoeUI-Bold.woff2) format("woff2"), url(http://dom.tverstroyka.ru/fonts/SegoeUI-Bold.woff) format("woff"),
-    url(http://dom.tverstroyka.ru/fonts/SegoeUI-Bold.otf) format("opentype"), url(../fonts/SegoeUI-Bold.ttf) format("truetype");
-font-style: normal;
-font-weight: 400;
-}
-@font-face {
-font-family: SegoeUI-Semibold;
-src: url(../fonts/SegoeUI-Semibold.eot@) format("embedded-opentype"), url(../fonts/SegoeUI-Semibold.woff2) format("woff2"), url(../fonts/SegoeUI-Semibold.woff) format("woff"),
-    url(http://dom.tverstroyka.ru/fonts/SegoeUI-Semibold.otf) format("opentype"), url(../fonts/SegoeUI-Semibold.ttf) format("truetype");
+src: url(../fonts/SegoeUI-Bold.eot@) format("embedded-opentype"),
+ url(../fonts/SegoeUI-Bold.woff2) format("woff2"),
+  url(../fonts/SegoeUI-Bold.woff) format("woff"),
+    url(../fonts/SegoeUI-Bold.otf) format("opentype"),
+     url(../fonts/SegoeUI-Bold.ttf) format("truetype");
 font-style: normal;
 font-weight: 400;
 }
 @font-face {
 font-family: ProximaNova-Extrabold;
-src: url(../fonts/ProximaNova-Extrabold.eot@) format("embedded-opentype"), url(../fonts/ProximaNova-Extrabold.woff2) format("woff2"), url(../fonts/ProximaNova-Extrabold.woff) format("woff"),
-    url(http://dom.tverstroyka.ru/fonts/ProximaNova-Extrabold.otf) format("opentype"), url(../fonts/ProximaNova-Extrabold.ttf) format("truetype");
+src: url(../fonts/ProximaNova-Extrabold.eot@) format("embedded-opentype"),
+ url(../fonts/ProximaNova-Extrabold.woff2) format("woff2"),
+  url(../fonts/ProximaNova-Extrabold.woff) format("woff"),
+    url(../fonts/ProximaNova-Extrabold.otf) format("opentype"), 
+    url(../fonts/ProximaNova-Extrabold.ttf) format("truetype");
 font-style: normal;
 font-weight: 400;
 }
@@ -6548,7 +6544,7 @@ text-transform: none;
 }
 .link {
 color: #0090ff;
-font-family: SegoeUI-Semibold, sans-serif;
+font-family: SegoeUI-Bold, sans-serif;
 font-size: 16px;
 border-bottom: 1px dotted;
 margin-right: 8px;
@@ -8286,7 +8282,7 @@ h2 {
 }
 .bg7 .row:nth-child(2) {
     position: relative;
-    padding-bottom: 356px;
+    padding-bottom: 16px;
 }
 .bg7 .row:nth-child(2) > div:first-child {
     position: static;
@@ -8900,11 +8896,27 @@ margin-bottom: 20px;
 }
 }
 
+.btn_call.hidden-xs.mesure_up{
+margin: auto;
+display: block;
+min-width: 140px;
+
+
+}
+
+
 @media (max-width: 767px){
 .bg5 .box_nav {
     width: 80px;
     height: 80px;
 }
+
+.btn_call.hidden-xs.mesure_up{
+display: block!important;
+margin-bottom: 20px;
+
+}
+
 
 .icons_text {
    font-size: 16px;
@@ -8941,6 +8953,7 @@ margin-bottom: 20px;
 .text_agreements{
     margin-bottom: 20px;
     text-align: center;
+    font-size: 14px;
 }
 
 .agreement.btn_call {
@@ -8980,3 +8993,5 @@ display: -webkit-flex;
 display: -ms-flexbox;
 }
 }
+
+

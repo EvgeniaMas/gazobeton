@@ -26,18 +26,38 @@ $(document).ready(function() {
 
     $('#phone-2').mask('+7 (999) 999-99-99');//footer
 
+
+
+
+$('.mesure_up').click(function(e) {
+		var values = $(e.target).val();
+	    $('#material').val(values);
+ 	 });
+
+
+
+
+
+
+
+
       $('.contactform1').submit(function(e) {
       	//отмена действия по умолчанию для кнопки submit
       	e.preventDefault(); 
         var $form = $(this);
+        var error  = false;
        var alert_mes = $form.find('.error_alert');
         $form.find('.required').each( function(){ 
       if ($(this).val() == '') {
       	
-      	$(alert_mes).show();       
-         return false;
+      	$(alert_mes).show(); 
+      	error =true;      
+         return; 
       } 
+
   });
+
+         if(!error){
 
         $.ajax({
           type: $form.attr('method'),
@@ -47,12 +67,19 @@ $(document).ready(function() {
         $(alert_mes).hide();       	
           $('.modal').modal('hide');   
 	      $('#modal4').modal('show');
+	      error = false;
         }).fail(function() {
-          // console.log('fail');
+          
         });
-        
+       } 
              
     });
+
+
+
+
+
+
 
 
 

@@ -163,19 +163,24 @@
                           <div class="example_project wow fadeInUp">
                            <img class="example_project_image" src="img/gazobeton_house.jpg" align="Проекты домов">
                            <p class="examples_text">Дом из газобетона</p>
-                        </div>
+                           <button value="Замер дома из газобетона" data-toggle="modal" data-target="#modal2" class="btn_call hidden-xs mesure_up">Замер</button>
+                        </div>                         
                        </div>
                  <div class="vertical col-md-4">
                           <div class="example_project wow fadeInUp">
                            <img class="example_project_image" src="img/stone_house.jpg" align="Проекты домов">
                            <p class="examples_text">Дом из камня</p>
+                           <button value="Замер дома из камня" data-toggle="modal" data-target="#modal2" class="btn_call hidden-xs mesure_up">Замер</button>
                         </div>
+                        
                        </div>
                         <div class="vertical col-md-4">
                           <div class="example_project wow fadeInUp">
                            <img class="example_project_image" src="img/brick_house.jpg" align="Проекты домов">
                            <p class="examples_text">Дом из кирпича</p>
+                           <button value="Замер дома из кирпича" data-toggle="modal" data-target="#modal2" class="btn_call hidden-xs mesure_up">Замер</button>
                         </div>
+                        
                        </div>
 
                    </div>
@@ -388,6 +393,31 @@
                 </div>
             </div>
         </div>
+
+          <div id="modal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="popup1 popup_window modal fade">
+            <div role="document" class="modal-dialog">
+                <div class="modal-content">
+                    <div data-dismiss="modal" aria-label="Close" class="box-modal_close arcticmodal-close close"><span>X</span></div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="form">
+                                <div class="zag">Заказать замер будущего дома<span></span></div>
+                                <p class="desc main">Введите свои данные ниже, и мы скоро Вам перезвоним!</p>
+                                <form id="frm2" class="contactform1" method="post" action="mail.php" >
+                                    <div class="block"><label for="#name">Ваше имя:</label><input id="name" type="text" name="name" placeholder="" class="form-control required" /></div>
+                                    <div class="block"><label for="phone">Ваш телефон:</label><input id="phone" type="text" name="phone" placeholder="+7 (___) ___-__-__" class="form-control phone required" /></div>
+                                    <p class="error_alert">Укажите, пожалуйста, Ваше имя и телефон!</p>
+                                    <input id ="material" name="action" value="" type="hidden" />
+                                    <button>Заказать замер!</button>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div id="modal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="popup1 popup_window modal fade">
             <div role="document" class="modal-dialog">
                 <div class="modal-content">
